@@ -1,52 +1,84 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ALL_PROJECTS = [
+export const ALL_PROJECTS = [
   {
-    id: 1, imgId: 61, title: 'Nexus Dashboard', year: '2024',
-    category: 'SaaS', tags: ['React', 'TypeScript', 'D3'],
-    desc: 'Real-time analytics platform with dynamic data visualisations and multi-tenant architecture.',
-    featured: true,
-  },
-  {
-    id: 2, imgId: 62, title: 'Solaris CMS', year: '2024',
-    category: 'Web App', tags: ['Prisma', 'PostgreSQL'],
-    desc: 'Headless CMS with live preview, rich text editing, and role-based access control.',
-    featured: true,
-  },
-  {
-    id: 3, imgId: 63, title: 'Forma Design', year: '2023',
-    category: '3D / WebGL', tags: ['Three.js', 'GSAP', 'WebGL'],
-    desc: 'Interactive 3D product configurator with real-time shader animations and export to PDF.',
+    id: 1,
+    img: 'https://doodleipsum.com/600x400?random=1',
+    title: 'E-Commerce',
+    year: '2025',
+    category: 'E-Commerce',
+    tags: ['React', 'JavaScript', 'Tailwindcss'],
+    desc: 'A full-featured online store with product catalog, shopping cart, and secure checkout functionality.',
     featured: false,
   },
   {
-    id: 4, imgId: 64, title: 'Vault Finance', year: '2023',
-    category: 'Fintech', tags: ['React', 'Node', 'Stripe'],
-    desc: 'Personal finance tracker with budgeting tools, transaction categorisation, and Stripe billing.',
+    id: 2,
+    img: 'https://doodleipsum.com/600x400?random=2',
+    title: 'App Store',
+    year: '2026',
+    category: 'App',
+    tags: ['Prisma', 'PostgreSQL'],
+    desc: 'A curated app marketplace where users can discover, download, and review mobile applications.',
     featured: false,
   },
   {
-    id: 5, imgId: 65, title: 'Helix AI', year: '2023',
-    category: 'AI / ML', tags: ['Python', 'OpenAI', 'React'],
-    desc: 'AI-powered document assistant with semantic search, summarisation, and citation tracking.',
+    id: 3,
+    img: 'https://doodleipsum.com/600x400?random=3',
+    title: 'Emoji Game',
+    year: '2026',
+    category: '3D / WebGL',
+    tags: ['Three.js', 'GSAP', 'WebGL'],
+    desc: 'An interactive web game where players match emojis in a fun 3D environment with animated effects.',
     featured: false,
   },
   {
-    id: 6, imgId: 66, title: 'Pulse Analytics', year: '2022',
-    category: 'Dashboard', tags: ['Tailwind', 'Recharts', 'REST'],
-    desc: 'Marketing analytics suite with campaign tracking, funnel visualisation, and export tools.',
+    id: 4,
+    img: 'https://doodleipsum.com/600x400?random=4',
+    title: 'Tic-Tac-Toe',
+    year: '2026',
+    category: 'Fintech',
+    tags: ['React', 'Node', 'Stripe'],
+    desc: 'A classic Tic-Tac-Toe game with multiplayer support and an intuitive, responsive UI.',
     featured: false,
   },
   {
-    id: 7, imgId: 67, title: 'Orbit Mobile', year: '2022',
-    category: 'Mobile', tags: ['React Native', 'Expo', 'Firebase'],
-    desc: 'Cross-platform habit tracker with streak visualisation, reminders, and cloud sync.',
+    id: 5,
+    img: 'https://doodleipsum.com/600x400?random=5',
+    title: 'Comments App',
+    year: '2026',
+    category: 'AI / ML',
+    tags: ['Python', 'OpenAI', 'React'],
+    desc: 'A smart commenting system that auto-suggests replies, detects spam, and organizes discussions.',
     featured: false,
   },
   {
-    id: 8, imgId: 68, title: 'Strata Blog', year: '2022',
-    category: 'Web App', tags: ['MDX', 'Tailwind'],
-    desc: 'Developer-focused blogging platform with MDX support, dark mode, and SEO tooling.',
+    id: 6,
+    img: 'https://doodleipsum.com/600x400?random=6',
+    title: 'Book Appointments',
+    year: '2026',
+    category: 'Dashboard',
+    tags: ['Tailwind', 'Recharts', 'REST'],
+    desc: 'A scheduling dashboard for users to book, manage, and track appointments with visual analytics.',
+    featured: false,
+  },
+  {
+    id: 7,
+    img: 'https://doodleipsum.com/600x400?random=7',
+    title: 'StopWatch',
+    year: '2026',
+    category: 'Mobile',
+    tags: ['React Native', 'Expo', 'Firebase'],
+    desc: 'A mobile stopwatch app with lap tracking, timers, and cloud sync across devices.',
+    featured: false,
+  },
+  {
+    id: 8,
+    img: 'https://doodleipsum.com/600x400?random=8',
+    title: 'Expense Tracker',
+    year: '2026',
+    category: 'Web App',
+    tags: ['MDX', 'Tailwind'],
+    desc: 'A simple web app to track income and expenses, categorize spending, and visualize budgets.',
     featured: false,
   },
 ];
@@ -104,7 +136,6 @@ function ProjectCard({ project, index, layout }) {
             {project.title}
           </h3>
           <span className="text-[9px] text-[#3a3530] font-['DM_Mono',monospace] tracking-widest mt-1 shrink-0 ml-4">
-            {project.year}
           </span>
         </div>
 
@@ -112,13 +143,7 @@ function ProjectCard({ project, index, layout }) {
           {project.desc}
         </p>
 
-        <div className="flex flex-wrap gap-1.5">
-          {project.tags.map((tag, i) => (
-            <span key={i} className="text-[9px] tracking-[0.2em] uppercase px-2 py-0.5 border border-[#2a2520] text-[#6b6560] font-['DM_Mono',monospace]">
-              {tag}
-            </span>
-          ))}
-        </div>
+        
 
         <div className="mt-4 text-[#e8b86d] text-[10px] tracking-[0.2em] uppercase font-['DM_Mono',monospace] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
           View Project <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">→</span>
@@ -148,14 +173,13 @@ export default function Projects() {
   const [showAll, setShowAll] = useState(false);
 
 
-
-
   const filtered = activeFilter === 'All'
     ? ALL_PROJECTS
     : ALL_PROJECTS.filter((p) => p.category === activeFilter);    
   const visible = showAll ?
    filtered : filtered.slice(0, 6);
 
+   
   return (
     <>
       <style>{`
@@ -189,7 +213,6 @@ export default function Projects() {
                 </h1>
               </div>
 
-              {/* Meta */}
               <div className="text-right">
                 <div className="text-[10px] tracking-[0.3em] uppercase text-[#3a3530] font-['DM_Mono',monospace] mb-2">
                   Total projects
@@ -206,22 +229,6 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="border-b border-[#1e1c19] sticky top-14 z-30 bg-[#0f0e0c]/90 backdrop-blur-md">
-          <div className="max-w-7xl mx-auto px-8 py-4 flex items-center gap-3 overflow-x-auto scrollbar-none">
-            <span className="text-[9px] tracking-[0.3em] uppercase text-[#3a3530] shrink-0 mr-2">Filter</span>
-            {CATEGORIES.map((cat) => (
-              <FilterPill
-                key={cat}
-                label={cat}
-                active={activeFilter === cat}
-                onClick={() => { setActiveFilter(cat); setShowAll(false); }}
-              />
-            ))}
-            <div className="ml-auto shrink-0 text-[10px] tracking-[0.2em] text-[#3a3530] font-['DM_Mono',monospace]">
-              {filtered.length} result{filtered.length !== 1 ? 's' : ''}
-            </div>
-          </div>
-        </div>
 
         <div className="max-w-7xl mx-auto px-8 py-16">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -257,14 +264,13 @@ export default function Projects() {
         </div>
 
         <div className="border-t border-[#1e1c19] py-16">
-                    <div className="max-w-7xl mx-auto px-8 flex flex-col     
-                    md:flex-row items-center justify-between gap-6">
+                    <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="font-['DM_Serif_Display',serif] text-2xl italic text-[#e8e3d9]">
               Have a project in mind?
             </p>
             
             <a
-              href="mailto:hello@example.com"
+              href="mailto:avinash.avi7a@gmail.com"
               className="px-8 py-3 bg-[#e8b86d] text-[#0f0e0c] text-[10px] tracking-[0.3em] uppercase
                 font-['DM_Mono',monospace] hover:bg-[#f0c97a] transition-colors duration-200 inline-flex items-center gap-3"
             >

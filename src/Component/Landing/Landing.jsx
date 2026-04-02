@@ -136,9 +136,9 @@ export default function Landing() {
 
           <div className="flex flex-wrap gap-6 justify-center">
             {[
-              { name: 'Twitter', link: 'https://twitter.com' },
-              { name: 'LinkedIn', link: 'https://linkedin.com' },
-              { name: 'GitHub', link: 'https://github.com' },              
+              { name: 'Twitter', link: 'https://x.com/Avi7aAvinash' },
+              { name: 'LinkedIn', link: 'https://www.linkedin.com/in/avinash-b-v-9752501a6' },
+              { name: 'GitHub', link: 'https://github.com/undergit995' },              
             ].map((social) => (
               <a
                 key={social.name}

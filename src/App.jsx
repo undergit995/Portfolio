@@ -1,6 +1,4 @@
 
-
-
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Link, NavLink, useLocation } from 'react-router-dom'
 import Landing from './Component/Landing/Landing'
@@ -38,6 +36,8 @@ function AppInner() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/projects', label: 'Projects' },
+
+
   ]
 
   return (
