@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 export const ALL_PROJECTS = [
   {
     id: 1,
-    img: 'https://doodleipsum.com/600x400?random=1',
+    img: 'https://www.demoup-cliplister.com/wp-content/uploads/2025/01/3d-ecommerce-blog-thumbnail-featured-scaled-1.jpg',
     title: 'E-Commerce',
     year: '2025',
     category: 'E-Commerce',
@@ -13,7 +13,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 2,
-    img: 'https://doodleipsum.com/600x400?random=2',
+    img: 'https://img.freepik.com/free-photo/two-smartphones-inside-geometric-neon-frame_187299-46537.jpg?semt=ais_hybrid&w=740&q=80',
     title: 'App Store',
     year: '2026',
     category: 'App',
@@ -23,7 +23,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 3,
-    img: 'https://doodleipsum.com/600x400?random=3',
+    img: 'https://thumbs.dreamstime.com/b/gamer-video-game-cartoon-emoji-emoticon-face-player-217604732.jpg',
     title: 'Emoji Game',
     year: '2026',
     category: '3D / WebGL',
@@ -33,7 +33,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 4,
-    img: 'https://doodleipsum.com/600x400?random=4',
+    img: 'https://m.media-amazon.com/images/I/61oIpZLmHdL.png',
     title: 'Tic-Tac-Toe',
     year: '2026',
     category: 'Fintech',
@@ -43,7 +43,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 5,
-    img: 'https://doodleipsum.com/600x400?random=5',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKmeK3OHGt5BiGkFps0QnPKF4FZsN4lYWBQ&s',
     title: 'Comments App',
     year: '2026',
     category: 'AI / ML',
@@ -53,7 +53,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 6,
-    img: 'https://doodleipsum.com/600x400?random=6',
+    img: 'https://t4.ftcdn.net/jpg/07/21/95/03/360_F_721950328_RUBkAAcJXw3y64Wok0kYoDET3DNkKqQ2.jpg',
     title: 'Book Appointments',
     year: '2026',
     category: 'Dashboard',
@@ -63,7 +63,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 7,
-    img: 'https://doodleipsum.com/600x400?random=7',
+    img: 'https://cdn.dribbble.com/userupload/39362899/file/original-0ba2ced4f7b3419bce69ff19627022ca.png?resize=752x&vertical=center',
     title: 'StopWatch',
     year: '2026',
     category: 'Mobile',
@@ -73,7 +73,7 @@ export const ALL_PROJECTS = [
   },
   {
     id: 8,
-    img: 'https://doodleipsum.com/600x400?random=8',
+    img: 'https://cdn3d.iconscout.com/3d/premium/thumb/expense-tracking-3d-icon-png-download-8060296.png',
     title: 'Expense Tracker',
     year: '2026',
     category: 'Web App',
